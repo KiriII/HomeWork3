@@ -34,7 +34,7 @@ public class Chromosome {
     }
 
     public double calculateFitness(){
-        if (getFilledKnapsack().getPrice() > Knapsack.MaxWeight) return 0;
+        if (getFilledKnapsack().getWeight() > Knapsack.MaxWeight) return 0;
         return getFilledKnapsack().getPrice();
     }
 
