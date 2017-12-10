@@ -87,7 +87,7 @@ public class Knapsack {
     }
 
     public Chromosome[] nextGeneration(int[][] pairs){
-        Chromosome[] newGeneration = new Chromosome[gensCount];
+        Chromosome[] newGeneration = new Chromosome[populationCount];
 
         newGeneration[0] = population[getMaxFitnessChromosome()];
 
@@ -115,7 +115,7 @@ public class Knapsack {
             System.out.println("max code is " + max.population[max.getMaxFitnessChromosome()] + " with price " + max.population[max.getMaxFitnessChromosome()].getFilledKnapsack().getPrice()
                     + " in " + generationCounter + " generation");
             int[][] pairs = max.getTournamentPairs();
-            Chromosome nextGeneration[]= new Chromosome[populationCount];
+            Chromosome[] nextGeneration= new Chromosome[populationCount];
             nextGeneration = max.nextGeneration(  pairs );
             max.setPopulation(nextGeneration);
         }
