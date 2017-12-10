@@ -91,7 +91,7 @@ public class Knapsack {
 
         newGeneration[0] = population[getMaxFitnessChromosome()];
 
-        for (int i = 0; i < populationCount; i++){
+        for (int i = 1; i < populationCount; i++){
             newGeneration[i] = population[pairs[i][0]].child(population[pairs[i][1]]);
             newGeneration[i].mutation();
         }
